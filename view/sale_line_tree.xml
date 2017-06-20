@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<data>
+    <xpath expr="/tree/field[@name='sale']" position="after">
+        <field name="sale_date"/>
+        <field name="sale_shipment_party"/>
+        <field name="sale_party"/>
+        <field name="sale_state"/>
+    </xpath>
+</data>

@@ -1,0 +1,59 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:sale.line,sale_date:"
+msgid "Sale Date"
+msgstr "Fecha de venta"
+
+msgctxt "field:sale.line,sale_party:"
+msgid "Sale Party"
+msgstr "Tercero de venta"
+
+msgctxt "field:sale.line,sale_shipment_party:"
+msgid "Sale Shipment Party"
+msgstr "Tercero del envío de venta"
+
+msgctxt "field:sale.line,sale_state:"
+msgid "Sale State"
+msgstr "Estado de venta"
+
+msgctxt "model:ir.action,name:act_sale_line_form"
+msgid "Sale Lines"
+msgstr "Líneas de venta"
+
+msgctxt "model:ir.action,name:act_sale_line_form2"
+msgid "Sale Lines"
+msgstr "Líneas de venta"
+
+msgctxt "model:ir.action,name:act_sale_line_form3"
+msgid "Sale Lines"
+msgstr "Líneas de venta"
+
+msgctxt "model:ir.ui.menu,name:menu_sale_line_form"
+msgid "Sale Lines"
+msgstr "Líneas de venta"
+
+msgctxt "selection:sale.line,sale_state:"
+msgid "Canceled"
+msgstr "Cancelada"
+
+msgctxt "selection:sale.line,sale_state:"
+msgid "Confirmed"
+msgstr "Confirmada"
+
+msgctxt "selection:sale.line,sale_state:"
+msgid "Done"
+msgstr "Finalizada"
+
+msgctxt "selection:sale.line,sale_state:"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt "selection:sale.line,sale_state:"
+msgid "Processing"
+msgstr "En proceso"
+
+msgctxt "selection:sale.line,sale_state:"
+msgid "Quotation"
+msgstr "Presupuesto"
