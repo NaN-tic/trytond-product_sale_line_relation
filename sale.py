@@ -9,7 +9,6 @@ SALE_LINE_FIELD_MAP = {
     'sale_party': 'party',
     'sale_state': 'state',
     'sale_date': 'sale_date',
-    'sale_shipment_party': 'shipment_party',
     }
 
 
@@ -28,9 +27,6 @@ class SaleLine:
         searcher='search_sale_field')
     sale_party = fields.Function(fields.Many2One('party.party', 'Sale Party'),
         'get_sale_field', searcher='search_sale_field')
-    sale_shipment_party = fields.Function(fields.Many2One('party.party',
-            'Sale Shipment Party'), 'get_sale_field',
-        searcher='search_sale_field')
     sale_date = fields.Function(fields.Date('Sale Date'), 'get_sale_field',
         searcher='search_sale_field')
 
