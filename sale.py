@@ -13,8 +13,7 @@ SALE_LINE_FIELD_MAP = {
     }
 
 
-class SaleLine:
-    __metaclass__ = PoolMeta
+class SaleLine(metaclass=PoolMeta):
     __name__ = 'sale.line'
     # TODO 4.x sale_sate field is available since v4.2
     sale_state = fields.Function(fields.Selection([

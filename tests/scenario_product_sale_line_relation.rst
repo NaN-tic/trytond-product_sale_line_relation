@@ -142,11 +142,11 @@ Search Sale Lines::
     3
     >>> line1, line2, line3 = lines
     >>> line1.sale_state
-    u'quotation'
+    'quotation'
     >>> sale = line1.sale
     >>> sale.click('confirm')
     >>> line1.reload()
     >>> line1.sale_state
-    u'confirmed'
+    'processing'
     >>> line1.sale_date == today
     True
