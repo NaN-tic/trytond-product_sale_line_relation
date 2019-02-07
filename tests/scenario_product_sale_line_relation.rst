@@ -9,6 +9,7 @@ Imports::
     >>> from decimal import Decimal
     >>> from operator import attrgetter
     >>> from proteus import config, Model, Wizard, Report
+    >>> from trytond.tests.tools import activate_modules
     >>> from trytond.modules.company.tests.tools import create_company, \
     ...     get_company
     >>> from trytond.modules.account.tests.tools import create_fiscalyear, \
@@ -17,17 +18,9 @@ Imports::
     ...     set_fiscalyear_invoice_sequences, create_payment_term
     >>> today = datetime.date.today()
 
-Create database::
-
-    >>> config = config.set_trytond()
-    >>> config.pool.test = True
-
 Install product_sale_line_relation::
 
-    >>> Module = Model.get('ir.module')
-    >>> sale_module, = Module.find([('name', '=', 'product_sale_line_relation')])
-    >>> sale_module.click('install')
-    >>> Wizard('ir.module.install_upgrade').execute('upgrade')
+    >>> config = activate_modules('product_sale_line_relation')
 
 Create company::
 
@@ -93,7 +86,7 @@ Create product::
     >>> template.account_revenue = revenue
     >>> template.customer_taxes.append(tax)
     >>> template.save()
-    >>> product.template = template
+    >>> product, = template.products
     >>> product.save()
 
 Create payment term::
