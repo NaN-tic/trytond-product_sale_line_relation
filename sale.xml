@@ -28,6 +28,7 @@
 
         <!-- Rules -->
         <record model="ir.rule.group" id="rule_group_sale_line">
+            <field name="name">Sale Line Company Rule</field>
             <field name="model" search="[('model', '=', 'sale.line')]"/>
             <field name="global_p" eval="True"/>
         </record>
