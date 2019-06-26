@@ -26,18 +26,6 @@
         <menuitem parent="sale.menu_sale_form" action="act_sale_line_form"
             id="menu_sale_line_form" sequence="10"/>
 
-        <!-- Rules -->
-        <record model="ir.rule.group" id="rule_group_sale_line">
-            <field name="model" search="[('model', '=', 'sale.line')]"/>
-            <field name="global_p" eval="True"/>
-        </record>
-        <record model="ir.rule" id="rule_sale_line1">
-            <field name="domain"
-                eval="[('sale.company', '=', Eval('user', {}).get('company', None))]"
-                pyson="1"/>
-            <field name="rule_group" ref="rule_group_sale_line"/>
-        </record>
-
         <!-- product.product relate to sale.line -->
         <record model="ir.action.act_window" id="act_sale_line_form2">
             <field name="name">Sale Lines</field>
