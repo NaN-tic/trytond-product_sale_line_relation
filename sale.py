@@ -15,16 +15,6 @@ SALE_LINE_FIELD_MAP = {
 
 class SaleLine(metaclass=PoolMeta):
     __name__ = 'sale.line'
-    # TODO 4.x sale_sate field is available since v4.2
-    sale_state = fields.Function(fields.Selection([
-                ('draft', 'Draft'),
-                ('quotation', 'Quotation'),
-                ('confirmed', 'Confirmed'),
-                ('processing', 'Processing'),
-                ('done', 'Done'),
-                ('cancel', 'Canceled'),
-                ], 'Sale State'), 'get_sale_field',
-        searcher='search_sale_field')
     sale_party = fields.Function(fields.Many2One('party.party', 'Sale Party'),
         'get_sale_field', searcher='search_sale_field')
     sale_shipment_party = fields.Function(fields.Many2One('party.party',
