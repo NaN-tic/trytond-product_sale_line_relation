@@ -36,6 +36,8 @@ class SaleLine:
 
     def get_sale_field(self, name):
         name = SALE_LINE_FIELD_MAP[name]
+        if not self.sale:
+            return
         value = getattr(self.sale, name)
         if value and isinstance(value, ModelSQL):
             value = value.id
