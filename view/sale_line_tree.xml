@@ -7,6 +7,5 @@ this repository contains the full copyright notices and license terms. -->
         <field name="sale_shipment_party"/>
         <field name="sale_party"/>
         <field name="sale_state"/>
-        <field name="shipment_state"/>
     </xpath>
 </data>
