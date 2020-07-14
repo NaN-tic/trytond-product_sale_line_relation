@@ -18,10 +18,6 @@ msgctxt "field:sale.line,sale_state:"
 msgid "Sale State"
 msgstr "Estado de venta"
 
-msgctxt "field:sale.line,shipment_state:"
-msgid "Shipment State"
-msgstr "Estado envío"
-
 msgctxt "model:ir.action,name:act_sale_line_form"
 msgid "Sale Lines"
 msgstr "Líneas de venta"
@@ -61,19 +57,3 @@ msgstr "En proceso"
 msgctxt "selection:sale.line,sale_state:"
 msgid "Quotation"
 msgstr "Presupuesto"
-
-msgctxt "selection:sale.line,shipment_state:"
-msgid "Exception"
-msgstr "Excepción"
-
-msgctxt "selection:sale.line,shipment_state:"
-msgid "None"
-msgstr "Ninguno"
-
-msgctxt "selection:sale.line,shipment_state:"
-msgid "Sent"
-msgstr "Enviada"
-
-msgctxt "selection:sale.line,shipment_state:"
-msgid "Waiting"
-msgstr "En espera"
