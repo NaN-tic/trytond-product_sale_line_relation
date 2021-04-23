@@ -16,7 +16,6 @@ Imports::
     ...     create_chart, get_accounts, create_tax
     >>> from trytond.modules.account_invoice.tests.tools import \
     ...     set_fiscalyear_invoice_sequences, create_payment_term
-    >>> today = datetime.date.today()
 
 Install product_sale_line_relation::
 
@@ -141,5 +140,5 @@ Search Sale Lines::
     >>> line1.reload()
     >>> line1.sale_state
     'processing'
-    >>> line1.sale_date == today
+    >>> line1.sale_date == datetime.date.today()
     True
