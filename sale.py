@@ -2,6 +2,7 @@
 # copyright notices and license terms.
 from trytond.pool import PoolMeta
 from trytond.model import fields, ModelSQL
+from trytond.pyson import Eval
 
 __all__ = ['SaleLine']
 
@@ -15,10 +16,15 @@ SALE_LINE_FIELD_MAP = {
 
 class SaleLine(metaclass=PoolMeta):
     __name__ = 'sale.line'
-    sale_party = fields.Function(fields.Many2One('party.party', 'Sale Party'),
-        'get_sale_field', searcher='search_sale_field')
+    sale_party = fields.Function(fields.Many2One('party.party', 'Sale Party',
+        context={
+            'company': Eval('company'),
+            }, depends=['company']), 'get_sale_field',
+        searcher='search_sale_field')
     sale_shipment_party = fields.Function(fields.Many2One('party.party',
-            'Sale Shipment Party'), 'get_sale_field',
+            'Sale Shipment Party', context={
+                'company': Eval('company'),
+            }, depends=['company']), 'get_sale_field',
         searcher='search_sale_field')
     sale_date = fields.Function(fields.Date('Sale Date'), 'get_sale_field',
         searcher='search_sale_field')
