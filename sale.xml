@@ -26,39 +26,5 @@
         </record>
         <menuitem parent="sale.menu_sale_form" action="act_sale_line_form"
             id="menu_sale_line_form" sequence="10"/>
-
-        <!-- product.product relate to sale.line -->
-        <record model="ir.action.act_window" id="act_sale_line_form2">
-            <field name="name">Sale Lines</field>
-            <field name="res_model">sale.line</field>
-            <field name="domain"
-                eval="[If(Eval('active_ids', []) == [Eval('active_id')], ('product', '=', Eval('active_id')), ('product', 'in', Eval('active_ids')))]" pyson="1"/>
-        </record>
-        <record model="ir.action.keyword" id="act_sale_line_keyword2">
-            <field name="keyword">form_relate</field>
-            <field name="model">product.product,-1</field>
-            <field name="action" ref="act_sale_line_form2"/>
-        </record>
-        <record model="ir.action-res.group" id="act_sale_line_form2-group_sale">
-            <field name="action" ref="act_sale_line_form2"/>
-            <field name="group" ref="sale.group_sale"/>
-        </record>
-
-        <!-- product.template relate to sale.line -->
-        <record model="ir.action.act_window" id="act_sale_line_form3">
-            <field name="name">Sale Lines</field>
-            <field name="res_model">sale.line</field>
-            <field name="domain"
-                eval="[If(Eval('active_ids', []) == [Eval('active_id')], ('product.template', '=', Eval('active_id')), ('product.template', 'in', Eval('active_ids')))]" pyson="1"/>
-        </record>
-        <record model="ir.action.keyword" id="act_sale_line_keyword3">
-            <field name="keyword">form_relate</field>
-            <field name="model">product.template,-1</field>
-            <field name="action" ref="act_sale_line_form3"/>
-        </record>
-        <record model="ir.action-res.group" id="act_sale_line_form3-group_sale">
-            <field name="action" ref="act_sale_line_form3"/>
-            <field name="group" ref="sale.group_sale"/>
-        </record>
     </data>
 </tryton>
