@@ -18,12 +18,12 @@ class SaleLine(metaclass=PoolMeta):
     __name__ = 'sale.line'
     sale_party = fields.Function(fields.Many2One('party.party', 'Sale Party',
         context={
-            'company': Eval('company'),
+            'company': Eval('company', -1),
             }, depends=['company']), 'get_sale_field',
         searcher='search_sale_field')
     sale_shipment_party = fields.Function(fields.Many2One('party.party',
             'Sale Shipment Party', context={
-                'company': Eval('company'),
+                'company': Eval('company', -1),
             }, depends=['company']), 'get_sale_field',
         searcher='search_sale_field')
     sale_date = fields.Function(fields.Date('Sale Date'), 'get_sale_field',
